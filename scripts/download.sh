@@ -35,10 +35,10 @@ filtro=$4
 
 
 #Crea un directorio con el nombre recibido por el argumento , sino existe 
-mkdir -p ~/decont/$directorio
+mkdir -p $directorio
 
 #Descarga del url indicado por el argumento 
-wget -P ~/decont/$directorio $url
+wget -P $directorio $url
 
 
 #con esto estas guardando en la variable archivo el nombre del archivo que se ha descargado
@@ -51,7 +51,7 @@ if [ "$descomprimir" = "yes" ]; then
     # En el caso que se diga "yes"
 
 
-gunzip ~/decont/$directorio/$archivo 
+gunzip $directorio/$archivo 
 
 
 
