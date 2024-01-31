@@ -116,7 +116,7 @@ echo "ejecucion de STAR completada" >> ~/decont/log/pipeline.log
 echo "Pipeline completado exitosamente." >> ~/decont/log/pipeline.log
 
 
-'''
+
 
 
 # Crear un archivo de log con información de cutadapt y STAR
@@ -124,8 +124,7 @@ echo "Creando archivo de log general..."
 cutadapt_logs=$(cat ~/decont/log/cutadapt/*.log | grep "Reads with adapters" | grep "Total basepairs")
 star_logs=$(cat ~/decont/out/star/*/Log.final.out | grep -E "Uniquely mapped reads %|Number of reads mapped to multiple loci %|Number of reads mapped to too many loci %")
 
-echo -e "Cutadapt Logs:\n$cutadapt_logs\n\nSTAR Logs:\n$star_logs" > ~/decont/log/~/decont/log/pipeline.log
+echo -e "Cutadapt Logs:\n$cutadapt_logs\n\nSTAR Logs:\n$star_logs" > ~/decont/log/pipeline.log
 
 echo "Pipeline completado exitosamente."
 
-'''
