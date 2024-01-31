@@ -1,0 +1,7 @@
+name: Trabajo_linux
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - cutadapt
+prefix: /home/vant/miniforge3/envs/Trabajo_linux
