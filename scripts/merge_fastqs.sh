@@ -1,6 +1,10 @@
 #!/bin/bash
 
 
+
+
+
+
 # This script should merge all files from a given sample (the sample id is
 # provided in the third argument ($3)) into a single file, which should be
 # stored in the output directory specified by the second argument ($2).
@@ -32,7 +36,7 @@ echo "creando dir"
 
 #Fusionar todos los archivos del mismo sample en un solo archivo
 
-cat "$directorio_muestras"/"$id_muestras"*.gz > "$directorio_salida_muestras"/"$id_muestras".fastq
+zcat "$directorio_muestras"/"$id_muestras"*.fastq.gz > "$directorio_salida_muestras"/"$id_muestras".fastq
 
 gzip "$directorio_salida_muestras"/"$id_muestras".fastq
 
